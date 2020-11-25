@@ -14,6 +14,7 @@ const isThreeSmoothNum = (num) => {
   return true
 }
 
+// show how each number of 3-smooth number is factorized
 const g = (num) => {
   let a = 0
   let b = 0
