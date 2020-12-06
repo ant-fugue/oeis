@@ -1,4 +1,4 @@
-const QJS = require('../qjs')
+const QJS = require('../../qjs')
 const qjs = new QJS()
 
 const isSquareFree = (num) => {
