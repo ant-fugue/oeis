@@ -20,4 +20,4 @@ jobs:
       # I make tests run in a build process, not in a different process.
       - run:
           name: Test
-          command: npm test
+          command: npm run test
