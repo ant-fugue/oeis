@@ -1,4 +1,4 @@
-const QJS = require('../../A005117/qjs')
+const QJS = require('../qjs')
 const qjs = new QJS()
 
 // see detail of this sequence at:

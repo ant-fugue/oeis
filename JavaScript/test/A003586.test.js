@@ -1,6 +1,6 @@
 const { TestScheduler } = require('jest')
 const QJS = require('../qjs.js')
-const isThreeSmoothNum = require('../../JavaScript/A003586/A003586')
+const isThreeSmoothNum = require('../../JavaScript/sequences/A003586')
 const qjs = new QJS()
 
 test('list of natural numbers whose prime factors are 2 or 3', () => {
