@@ -5,7 +5,7 @@ orbs:
   # go: circleci/go@1.5.0
 
 jobs:
-  node-build:
+  "node-run":
     working_directory: ~/oeis
     # Reuse Docker container specification
     executor: node/default
@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Test
           command: cd JavaScript && npm run test
-  go-build:
+  "go-run":
     working_directory: ~/oeis
     docker:
       - image: circleci/golang:1.14.6
@@ -42,3 +42,9 @@ jobs:
       - run:
           name: Run tests
           command: cd Go/sequences && go test -v
+
+workflows:
+  build_and_test:
+    jobs:
+      - "node-run"
+      - "go-run"
