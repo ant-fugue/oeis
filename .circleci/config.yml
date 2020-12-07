@@ -2,8 +2,9 @@ version: 2.1
 
 orbs:
   node: circleci/node@3.0.0
+
 jobs:
-  build:
+  "node-run":
     working_directory: ~/oeis
     # Reuse Docker container specification
     executor: node/default
@@ -21,3 +22,28 @@ jobs:
       - run:
           name: Test
           command: cd JavaScript && npm run test
+  "go-run":
+    working_directory: ~/oeis
+    docker:
+      - image: circleci/golang:1.14.6
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - go-mod-v4-{{ checksum "go.sum" }}
+      - run:
+          name: Install Dependencies
+          command: go get ./...
+      - save_cache:
+          key: go-mod-v4-{{ checksum "go.sum" }}
+          paths:
+            - "/go/pkg/mod"
+      - run:
+          name: Run tests
+          command: cd Go/sequences && go test -v
+
+workflows:
+  build_and_test:
+    jobs:
+      - "node-run"
+      - "go-run"
