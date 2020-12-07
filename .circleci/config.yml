@@ -4,7 +4,7 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   build:
-    working_directory: ~/oeis/JavaScript
+    working_directory: ~/oeis
     # Reuse Docker container specification
     executor: node/default
     steps:
@@ -20,4 +20,4 @@ jobs:
       # I make tests run in a build process, not in a different process.
       - run:
           name: Test
-          command: npm run test
+          command: cd JavaScript && npm run test
