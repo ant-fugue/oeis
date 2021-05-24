@@ -5,7 +5,7 @@ const qjs = new QJS()
 // https://oeis.org/A003586
 // https://en.wikipedia.org/wiki/Smooth_number
 
-const isThreeSmoothNum = (num: number): boolean => {
+export const isThreeSmoothNum = (num: number): boolean => {
   while (num !== 1) {
     if (num % 2 === 0) num = num / 2
     else if (num % 3 === 0) num = num / 3
@@ -31,5 +31,3 @@ const g = (num: number) => {
 }
 
 // console.log(qjs.iota(1, 100).map(elem => g(elem)).filter(e => e !== false))
-
-module.exports = isThreeSmoothNum

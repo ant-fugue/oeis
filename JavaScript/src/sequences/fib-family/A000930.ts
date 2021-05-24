@@ -2,7 +2,7 @@
 // const QJS = require('../qjs')
 // const qjs = new QJS()
 
-const A000930 = (n: number): number => {
+export const A000930 = (n: number): number => {
   if (!Number.isInteger(n) || n < 0) {
     throw Error('arguments must be a natural number')
   }
