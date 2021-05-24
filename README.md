@@ -2,7 +2,7 @@
 
 Implementation of OEIS in various languages.
 
-The Online Encycopedia of Inter Sequences(https://oeis.org/)
+The Online Encycopedia of Integer Sequences(https://oeis.org/)
 
 Contents of OEIS is licensed under Creative Commons.
 I don't add any additional regulation on that.
