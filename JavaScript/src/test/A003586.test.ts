@@ -1,6 +1,5 @@
-import { TestScheduler } from 'jest'
 import QJS from '../qjs.js'
-import isThreeSmoothNum from '../../JavaScript/sequences/A003586'
+import { isThreeSmoothNum } from '../sequences/A003586'
 const qjs = new QJS()
 
 test('list of natural numbers whose prime factors are 2 or 3', () => {
