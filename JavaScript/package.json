@@ -16,8 +16,8 @@
     "url": "git+https://github.com/searchingforapuppy/oeis.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Shohei Matsuda",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/searchingforapuppy/oeis/issues"
   },
