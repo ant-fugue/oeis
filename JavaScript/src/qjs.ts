@@ -6,6 +6,15 @@ class QJS {
     }
     return arr
   }
+  static divOf(num: number): number[] {
+    const arr = []
+    for (let i = 1; i < num + 1; i++) {
+      if (num % i === 0) {
+        arr.push(i)
+      }
+    }
+    return arr
+  }
 }
 
 export default QJS
