@@ -15,6 +15,24 @@ class QJS {
     }
     return arr
   }
+  static primeFactor(num: number): Record<string, number> {
+    const obj: Record<string, number> = {}
+    let divisor = 2
+
+    while (num >= 2) {
+      if (num % divisor === 0) {
+        if (obj[divisor] === undefined) {
+          obj[divisor] = 1
+        } else {
+          obj[divisor] += 1
+        }
+        num = num / divisor
+      } else {
+        divisor++
+      }
+    }
+    return obj
+  }
 }
 
 export default QJS
