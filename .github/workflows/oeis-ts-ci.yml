@@ -1,5 +1,8 @@
 name: CI for oeis-ts
 
+env:
+  DIR_NAME: oeis-ts
+
 on:
   push:
     branches: [master]
@@ -16,7 +19,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: cd ../oeis-ts
+      - name: move to the directory which holds package.json
+      - run: cd ${{env.DIR_NAME}}
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
