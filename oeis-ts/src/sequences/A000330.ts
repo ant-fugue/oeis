@@ -1,9 +1,6 @@
 export const nthA000330Number = (n: number): number => {
-  if (n < 0) {
-    throw Error('index must be non-negative integer')
-  }
-  if (n === 0) {
-    return 0
+  if (n <= 0) {
+    throw Error('index must be the positive integer')
   }
   const arr: number[] = []
   for (let i = 0; i < n; i++) {
