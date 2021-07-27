@@ -19,6 +19,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm install
-      - run: npm lint:prettier
-      - run: npm lint:eslint
+      - run: npm run lint:prettier
+      - run: npm run lint:eslint
       - run: npm test
