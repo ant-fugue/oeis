@@ -1,12 +1,11 @@
 import { isA003601 } from '../sequences/A003601'
-import assert from 'assert'
 
 describe('isA003601', () => {
   it('returns true if the average of the divisors of n is an integer', () => {
-    assert.deepStrictEqual(isA003601(1), true)
-    assert.deepStrictEqual(isA003601(5), true)
-    assert.deepStrictEqual(isA003601(30), true)
-    assert.deepStrictEqual(isA003601(4), false)
+    expect(isA003601(1)).toBe(true)
+    expect(isA003601(5)).toBe(true)
+    expect(isA003601(30)).toBe(true)
+    expect(isA003601(4)).toBe(false)
   })
 })
 
