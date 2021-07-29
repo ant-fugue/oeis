@@ -33,6 +33,15 @@ class QJS {
     }
     return obj
   }
+  static getQuotient(num: number, divisor: number): number {
+    if (!Number.isInteger(num) || !Number.isInteger(divisor)) {
+      throw Error('the argument must be integers')
+    }
+    if (divisor === 0) {
+      throw Error('division by 0')
+    }
+    return Math.floor(num / divisor)
+  }
 }
 
 export default QJS

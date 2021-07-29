@@ -12,4 +12,9 @@ describe('QJS module tests', () => {
     expect(QJS.primeFactor(12)).toEqual({ 2: 2, 3: 1 })
     expect(QJS.primeFactor(30)).toEqual({ 2: 1, 3: 1, 5: 1 })
   })
+  test('getQuotient() returns the quotient from the given number and its divisor', () => {
+    expect(QJS.getQuotient(10, 2)).toBe(5)
+    expect(QJS.getQuotient(10, 3)).toBe(3)
+    expect(QJS.getQuotient(10, 11)).toBe(0)
+  })
 })
