@@ -6,7 +6,7 @@ export const genA000032num = (n: number): number => {
     throw Error('the argument must be non-negative integer')
   }
 
-  let fibs: Record<string, number> = {}
+  const fibs: Record<string, number> = {}
   const fib = (n: number): number => {
     if (fibs[n]) return fibs[n]
 
