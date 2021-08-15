@@ -7,6 +7,11 @@ describe('QJS module tests', () => {
   test('divOf() returns the array of divisors of the given number', () => {
     expect(QJS.divOf(6)).toEqual([1, 2, 3, 6])
   })
+  test('divSum() returns the sum of all divisors', () => {
+    expect(QJS.divSum(1)).toBe(1)
+    expect(QJS.divSum(4)).toBe(7)
+    expect(QJS.divSum(6)).toBe(12)
+  })
   test('factorization() returns the object of prime factors of the given number', () => {
     expect(QJS.primeFactor(2)).toEqual({ 2: 1 })
     expect(QJS.primeFactor(12)).toEqual({ 2: 2, 3: 1 })

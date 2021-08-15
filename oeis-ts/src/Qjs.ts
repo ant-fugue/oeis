@@ -15,6 +15,15 @@ class QJS {
     }
     return arr
   }
+
+  static divSum(num: number): number {
+    const divisors = []
+    for (let i = 1; i < num + 1; i++) {
+      if (num % i === 0) divisors.push(i)
+    }
+    return divisors.reduce((a, c) => a + c)
+  }
+
   static primeFactor(num: number): Record<string, number> {
     const obj: Record<string, number> = {}
     let divisor = 2
