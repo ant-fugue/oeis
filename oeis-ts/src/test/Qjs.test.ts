@@ -26,4 +26,7 @@ describe('QJS module tests', () => {
     expect(QJS.getIntArrayFromInt(1)).toEqual([1])
     expect(QJS.getIntArrayFromInt(23)).toEqual([2, 3])
   })
+  test('getNthPolygon() returns the object which has vertex and edge properties', () => {
+    expect(QJS.genNthPolygon(5)).toEqual({ vertex: 5, edge: 5 })
+  })
 })

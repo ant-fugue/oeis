@@ -61,6 +61,17 @@ class QJS {
       .split('')
       .map((elem) => parseInt(elem))
   }
+  static genNthPolygon(n: number): Record<string, number> {
+    if (!Number.isInteger(n) || n < 3) {
+      throw Error(
+        'the argument must be a natural number which is bigger than 3'
+      )
+    }
+    return {
+      vertex: n,
+      edge: n,
+    }
+  }
 }
 
 export default QJS
