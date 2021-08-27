@@ -22,4 +22,8 @@ describe('QJS module tests', () => {
     expect(QJS.getQuotient(10, 3)).toBe(3)
     expect(QJS.getQuotient(10, 11)).toBe(0)
   })
+  test('getIntArrayFromInt() returns the array which contains integers which are decompose to digits from original integer', () => {
+    expect(QJS.getIntArrayFromInt(1)).toEqual([1])
+    expect(QJS.getIntArrayFromInt(23)).toEqual([2, 3])
+  })
 })

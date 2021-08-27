@@ -51,6 +51,16 @@ class QJS {
     }
     return Math.floor(num / divisor)
   }
+
+  static getIntArrayFromInt(num: number): number[] {
+    if (!Number.isInteger(num) || !Number.isInteger(num)) {
+      throw Error('the argument must be integers')
+    }
+    return num
+      .toString()
+      .split('')
+      .map((elem) => parseInt(elem))
+  }
 }
 
 export default QJS
