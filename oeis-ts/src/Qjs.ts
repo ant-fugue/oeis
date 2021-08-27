@@ -53,7 +53,7 @@ class QJS {
   }
 
   static getIntArrayFromInt(num: number): number[] {
-    if (!Number.isInteger(num) || !Number.isInteger(num)) {
+    if (!Number.isInteger(num)) {
       throw Error('the argument must be integers')
     }
     return num
