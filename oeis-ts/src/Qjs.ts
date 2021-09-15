@@ -42,6 +42,21 @@ class QJS {
     }
     return obj
   }
+
+  static primeFactorArr(num: number): number[] {
+    const arr: number[] = []
+    let divisor = 2
+
+    while (num >= 2) {
+      if (num % divisor === 0) {
+        arr.push(divisor)
+        num = num / divisor
+      } else {
+        divisor++
+      }
+    }
+    return arr
+  }
   static getQuotient(num: number, divisor: number): number {
     if (!Number.isInteger(num) || !Number.isInteger(divisor)) {
       throw Error('the argument must be integers')
